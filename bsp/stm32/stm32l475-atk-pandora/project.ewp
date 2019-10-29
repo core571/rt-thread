@@ -346,13 +346,14 @@
           <state>$PROJ_DIR$\..\..\..\libcpu\arm\common</state>
           <state>$PROJ_DIR$\..\..\..\libcpu\arm\cortex-m4</state>
           <state>$PROJ_DIR$\board\ports</state>
-          <state>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\CMSIS\Include</state>
-          <state>$PROJ_DIR$\..\..\..\components\drivers\include</state>
           <state>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\CMSIS\Device\ST\STM32L4xx\Include</state>
+          <state>$PROJ_DIR$\..\..\..\components\drivers\include</state>
+          <state>$PROJ_DIR$\..\..\..\components\drivers\sensors</state>
           <state>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\STM32L4xx_HAL_Driver\Inc</state>
           <state>$PROJ_DIR$\.</state>
           <state>$PROJ_DIR$\applications</state>
           <state>$PROJ_DIR$\..\libraries\HAL_Drivers\config</state>
+          <state>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\CMSIS\Include</state>
           <state>$PROJ_DIR$\board</state>
           <state>$PROJ_DIR$\..\..\..\components\libc\compilers\common</state>
           <state>$PROJ_DIR$\board\CubeMX_Config\Inc</state>
@@ -1377,13 +1378,14 @@
           <state>$PROJ_DIR$\..\..\..\libcpu\arm\common</state>
           <state>$PROJ_DIR$\..\..\..\libcpu\arm\cortex-m4</state>
           <state>$PROJ_DIR$\board\ports</state>
-          <state>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\CMSIS\Include</state>
-          <state>$PROJ_DIR$\..\..\..\components\drivers\include</state>
           <state>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\CMSIS\Device\ST\STM32L4xx\Include</state>
+          <state>$PROJ_DIR$\..\..\..\components\drivers\include</state>
+          <state>$PROJ_DIR$\..\..\..\components\drivers\sensors</state>
           <state>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\STM32L4xx_HAL_Driver\Inc</state>
           <state>$PROJ_DIR$\.</state>
           <state>$PROJ_DIR$\applications</state>
           <state>$PROJ_DIR$\..\libraries\HAL_Drivers\config</state>
+          <state>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\CMSIS\Include</state>
           <state>$PROJ_DIR$\board</state>
           <state>$PROJ_DIR$\..\..\..\components\libc\compilers\common</state>
           <state>$PROJ_DIR$\board\CubeMX_Config\Inc</state>
@@ -2072,9 +2074,6 @@
       <name>$PROJ_DIR$\..\..\..\src\components.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\src\cpu.c</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\..\src\device.c</name>
     </file>
     <file>
@@ -2114,7 +2113,22 @@
   <group>
     <name>Applications</name>
     <file>
+      <name>$PROJ_DIR$\applications\key.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\applications\led_alert.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\applications\main.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\applications\mylog.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\applications\pm25_th.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\applications\temp_humi_th.c</name>
     </file>
   </group>
   <group>
@@ -2135,7 +2149,19 @@
       <name>$PROJ_DIR$\..\libraries\HAL_Drivers\drv_usart.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\libraries\HAL_Drivers\drv_soft_i2c.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\libraries\HAL_Drivers\drv_adc.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\libraries\HAL_Drivers\drv_common.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\libraries\HAL_Drivers\temp_humi.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\libraries\HAL_Drivers\pm25.c</name>
     </file>
   </group>
   <group>
@@ -2159,7 +2185,19 @@
   <group>
     <name>DeviceDrivers</name>
     <file>
+      <name>$PROJ_DIR$\..\..\..\components\drivers\i2c\i2c_core.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\components\drivers\i2c\i2c_dev.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\components\drivers\i2c\i2c-bit-ops.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\..\..\components\drivers\misc\pin.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\components\drivers\misc\adc.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\components\drivers\serial\serial.c</name>
@@ -2184,6 +2222,15 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\components\drivers\src\workqueue.c</name>
+    </file>
+  </group>
+  <group>
+    <name>Sensors</name>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\components\drivers\sensors\sensor.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\components\drivers\sensors\sensor_cmd.c</name>
     </file>
   </group>
   <group>
@@ -2268,6 +2315,18 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_usart_ex.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_i2c.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_i2c_ex.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_adc.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\libraries\STM32L4xx_HAL\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_adc_ex.c</name>
     </file>
   </group>
 </project>

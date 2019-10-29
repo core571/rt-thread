@@ -61,7 +61,7 @@ if GetDepend(['BSP_USING_ON_CHIP_FLASH', 'SOC_SERIES_STM32F0']):
 if GetDepend(['BSP_USING_ON_CHIP_FLASH', 'SOC_SERIES_STM32F1']):
     src += ['drv_flash/drv_flash_f1.c']
 
-if GetDepend(['BSP_USING_ON_CHIP_FLASH', 'SOC_SERIES_STM32F2']):
+    if GetDepend(['BSP_USING_ON_CHIP_FLASH', 'SOC_SERIES_STM32F2']):
     src += ['drv_flash/drv_flash_f2.c']
 
 if GetDepend(['BSP_USING_ON_CHIP_FLASH', 'SOC_SERIES_STM32F4']):
@@ -72,7 +72,7 @@ if GetDepend(['BSP_USING_ON_CHIP_FLASH', 'SOC_SERIES_STM32F7']):
 
 if GetDepend(['BSP_USING_ON_CHIP_FLASH', 'SOC_SERIES_STM32L4']):
     src += ['drv_flash/drv_flash_l4.c']
-	
+
 if GetDepend('RT_USING_HWCRYPTO'):
     src += ['drv_crypto.c']
 	
@@ -89,6 +89,8 @@ if GetDepend(['BSP_USING_PULSE_ENCODER']):
     src += ['drv_pulse_encoder.c']
 
 src += ['drv_common.c']
+src += ['temp_humi.c']
+src += ['pm25.c']
 
 path =  [cwd]
 path += [cwd + '/config']
